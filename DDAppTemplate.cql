@@ -13,17 +13,3 @@ CREATE TABLE IF NOT EXISTS hello (
 
 INSERT INTO hello (greeting, name) VALUES ('hello', 'world');
 INSERT INTO hello (greeting, name) VALUES ('hola', 'mundo');
-
-CREATE TABLE IF NOT EXISTS user_visits (
-  user TEXT,
-  utc_millis BIGINT,
-  store TEXT,
-  PRIMARY KEY (user, utc_millis)
-) WITH CLUSTERING ORDER BY (utc_millis DESC);
-
-CREATE TABLE IF NOT EXISTS stores (
-  city TEXT,
-  store TEXT,
-  manager TEXT,
-  PRIMARY KEY (city, store)
-);

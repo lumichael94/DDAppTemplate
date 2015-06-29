@@ -3,14 +3,14 @@ import Keys._
 import sbtassembly.Plugin._
 import AssemblyKeys._
 
-object CassandraExampleBuild extends Build {
+object DDAppTemplate extends Build {
   lazy val buildSettings = Defaults.defaultSettings ++ Seq(
     version := "1.0",
     scalaVersion := "2.10.4"
   )
 
   lazy val app = Project(
-    "cassandra-example",
+    "DDAppTemplate",
     file("."),
     settings = buildSettings ++ assemblySettings ++ Seq(
       libraryDependencies ++= Seq(
